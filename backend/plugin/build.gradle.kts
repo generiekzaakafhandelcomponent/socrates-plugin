@@ -44,6 +44,8 @@ dependencies {
     testImplementation("com.ritense.valtimo:building-block")
     testImplementation("com.ritense.valtimo:local-resource")
     testImplementation("com.ritense.valtimo:test-utils-common")
+    implementation("io.github.microutils:kotlin-logging:3.0.5")
+    implementation("com.ritense.valtimoplugins:http-client-authentication-plugin:1.0.0")
 
     testImplementation("org.springframework.boot:spring-boot-starter-web")
     testImplementation("org.springframework.boot:spring-boot-starter-data-jpa")

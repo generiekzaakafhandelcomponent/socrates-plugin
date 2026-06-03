@@ -1,0 +1,31 @@
+[
+    {
+        "activityId": "StartSocratesDossierStartEvent",
+        "activityType": "bpmn:UserTask:create",
+        "processLinkType": "form",
+        "formDisplayType": "panel",
+        "formSize": "medium",
+        "formDefinitionName": "start-form-opvoeren-dienst-in-socrates"
+    },
+    {
+        "activityId": "ControlerenDienstInSocratesTask",
+        "activityType": "bpmn:UserTask:create",
+        "processLinkType": "form",
+        "formDisplayType": "panel",
+        "formSize": "medium",
+        "formDefinitionName": "controleren-dienst-in-socrates"
+    },
+    {
+        "activityId": "OpvoerenDienstInSocratesTask",
+        "activityType": "bpmn:ServiceTask:start",
+        "pluginConfigurationId": "9961ca7e-9ae7-4688-90be-68c3ca823e11",
+        "pluginActionDefinitionKey": "dienst-aanmaken",
+        "processLinkType": "plugin",
+        "actionProperties": {
+            "zaakId": "zaakIdentificatie",
+            "loBehandeldInputProcessVariable": "loBehandeld",
+            "betrokkenenInputProcessVariable": "betrokkenen",
+            "processVariableName": "socratesResponse"
+        }
+    }
+]

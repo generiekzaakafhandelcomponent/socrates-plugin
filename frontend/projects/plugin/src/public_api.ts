@@ -15,11 +15,11 @@
  */
 
 /*
- * Public API Surface of sample-plugin
+ * Public API Surface of Socrates plugin
  */
 
-export * from "./lib/plugins/sample-plugin/models";
-export * from "./lib/plugins/sample-plugin/sample-plugin-module";
-export * from "./lib/plugins/sample-plugin/sample-plugin.specification";
-export * from "./lib/plugins/sample-plugin/components/sample-plugin-configuration/sample-plugin-configuration.component";
-export * from "./lib/plugins/sample-plugin/components/sample-action-configuration/sample-action-configuration.component";
+export * from './lib/models';
+export * from './lib/socrates-plugin.module';
+export * from './lib/socrates-plugin.specification';
+export * from './lib/components/socrates-configuration/socrates-configuration.component';
+export * from './lib/components/dienst-aanmaken/dienst-aanmaken.component';

@@ -1,0 +1,16 @@
+{
+    "display": "form",
+    "components": [
+        {
+            "label": "Dienst is gecontroleerd",
+            "key": "submit",
+            "type": "button",
+            "input": true,
+            "action": "custom",
+            "custom": "form.submit();",
+            "tableView": false,
+            "showValidations": false,
+            "disableOnInvalid": true
+        }
+    ]
+}

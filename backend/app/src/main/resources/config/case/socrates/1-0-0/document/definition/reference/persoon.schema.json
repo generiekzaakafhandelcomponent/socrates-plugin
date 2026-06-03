@@ -1,0 +1,70 @@
+{
+  "$id": "persoon.schema",
+  "type": "object",
+  "title": "Persoon",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "properties": {
+    "voorletters": {
+      "type": "string"
+    },
+    "voornamen": {
+      "type": "string"
+    },
+    "voorvoegsel": {
+      "type": "string"
+    },
+    "achternaam": {
+      "type": "string"
+    },
+    "volledigeNaam": {
+      "type": "string"
+    },
+    "geboortedatum": {
+      "type": "string"
+    },
+    "communicatievoorkeur": {
+      "type": "string",
+      "enum": [
+        "portaal",
+        "post"
+      ]
+    },
+    "bsn": {
+      "type": "string"
+    },
+    "adres": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "straatnaam": {
+          "type": "string"
+        },
+        "huisnummer": {
+          "type": "number"
+        },
+        "huisletter": {
+          "type": "string"
+        },
+        "huisnummertoevoeging": {
+          "type": "string"
+        },
+        "postcode": {
+          "type": "string"
+        },
+        "woonplaatsnaam": {
+          "type": "string"
+        },
+        "aanduidingBijHuisnummer": {
+          "type": "string"
+        },
+        "locatieomschrijving": {
+          "type": "string"
+        }
+      }
+    },
+    "definitions": {}
+  }
+}

@@ -1,0 +1,7 @@
+[
+    {
+        "processDefinitionKey": "opvoeren-dienst-in-socrates",
+        "canInitializeDocument": true,
+        "startableByUser": true
+    }
+]

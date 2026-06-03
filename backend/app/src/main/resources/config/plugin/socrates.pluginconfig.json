@@ -1,0 +1,11 @@
+[
+    {
+        "id": "9961ca7e-9ae7-4688-90be-68c3ca823e11",
+        "title": "Socrates plugin (autodeployed)",
+        "pluginDefinitionKey": "socrates",
+        "properties": {
+            "socratesApiUrl": "http://localhost:9898",
+            "authenticationPluginConfiguration": "b9b02602-068b-4c73-975d-77fd0fdcab75"
+        }
+    }
+]

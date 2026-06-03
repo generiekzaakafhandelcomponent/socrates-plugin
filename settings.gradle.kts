@@ -1,4 +1,4 @@
-rootProject.name = "gzac-plugin-template"
+rootProject.name = "socrates-plugin"
 include(
     "backend",
     "backend:app",

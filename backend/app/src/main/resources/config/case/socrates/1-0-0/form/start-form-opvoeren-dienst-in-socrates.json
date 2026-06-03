@@ -1,0 +1,185 @@
+{
+  "display": "form",
+  "components": [
+    {
+      "key": "html",
+      "type": "htmlelement",
+      "input": false,
+      "label": "Instructions",
+      "content": "Start een dossier voor opvoeren dienst in Socrates.",
+      "tableView": false,
+      "refreshOnChange": false
+    },
+    {
+      "key": "pv:zaakIdentificatie",
+      "type": "textfield",
+      "input": true,
+      "label": "Zaak identificatie",
+      "tableView": true,
+      "defaultValue": "123456789",
+      "applyMaskOn": "change"
+    },
+    {
+      "key": "pv:loBehandeld",
+      "type": "container",
+      "input": true,
+      "label": "LoBehandeld",
+      "tableView": false,
+      "components": [
+        {
+          "key": "aanvraagdatum",
+          "type": "textfield",
+          "input": true,
+          "label": "Aanvraagdatum",
+          "tableView": true,
+          "defaultValue": "2026-06-01"
+        },
+        {
+          "key": "aanvraagid",
+          "type": "textfield",
+          "input": true,
+          "label": "Aanvraag ID",
+          "tableView": true,
+          "defaultValue": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+        },
+        {
+          "key": "codeOntvangendeGemeente",
+          "type": "textfield",
+          "input": true,
+          "label": "Code ontvangende gemeente",
+          "tableView": true,
+          "defaultValue": "0363"
+        },
+        {
+          "key": "huishouding",
+          "type": "container",
+          "input": true,
+          "label": "Huishouding",
+          "tableView": false,
+          "components": [
+            {
+              "key": "aanvrager",
+              "type": "container",
+              "input": true,
+              "label": "Aanvrager",
+              "tableView": false,
+              "components": [
+                {
+                  "key": "bsn",
+                  "type": "textfield",
+                  "input": true,
+                  "label": "BSN",
+                  "tableView": true,
+                  "defaultValue": "999993653"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ingangBijstandsuitkering",
+          "type": "container",
+          "input": true,
+          "label": "Ingang bijstandsuitkering",
+          "tableView": false,
+          "components": [
+            {
+              "key": "datumMeldingBijGemeente",
+              "type": "textfield",
+              "input": true,
+              "label": "Datum melding bij gemeente",
+              "tableView": true,
+              "defaultValue": "2026-05-15"
+            },
+            {
+              "key": "gewensteStartdatumUitkering",
+              "type": "textfield",
+              "input": true,
+              "label": "Gewenste startdatum uitkering",
+              "tableView": true,
+              "defaultValue": "2026-06-01"
+            }
+          ]
+        },
+        {
+          "key": "redenAanvraagLevensonderhoud",
+          "type": "container",
+          "input": true,
+          "label": "Reden aanvraag levensonderhoud",
+          "tableView": false,
+          "components": [
+            {
+              "key": "onvoldoendeInkomen",
+              "type": "textfield",
+              "input": true,
+              "label": "Onvoldoende inkomen",
+              "tableView": true,
+              "defaultValue": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pv:betrokkenen",
+      "type": "datagrid",
+      "input": true,
+      "label": "Betrokkenen",
+      "tableView": false,
+      "defaultValue": [
+        {
+          "Naam": "9",
+          "Rol": [
+            {
+              "Rolomschrijving": "BehandelaarAfdeling"
+            }
+          ]
+        },
+        {
+          "Naam": "21",
+          "Rol": [
+            {
+              "Rolomschrijving": "BehandelaarTeam"
+            }
+          ]
+        }
+      ],
+      "components": [
+        {
+          "key": "Naam",
+          "type": "textfield",
+          "input": true,
+          "label": "Naam",
+          "tableView": true
+        },
+        {
+          "key": "Rol",
+          "type": "datagrid",
+          "input": true,
+          "label": "Rol",
+          "tableView": false,
+          "components": [
+            {
+              "key": "Rolomschrijving",
+              "type": "textfield",
+              "input": true,
+              "label": "Rolomschrijving",
+              "tableView": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Indienen",
+      "key": "submit",
+      "type": "button",
+      "input": true,
+      "action": "custom",
+      "custom": "form.submit();",
+      "tableView": false,
+      "showValidations": false,
+      "disableOnInvalid": true
+    }
+  ]
+}
