@@ -55,9 +55,9 @@ export class DienstAanmakenComponent implements FunctionConfigurationComponent, 
         this.saveSubscription?.unsubscribe();
     }
 
-    public formValueChange(formValue: DienstAanmakenConfig): void {
-        this.formValue$.next(formValue);
-        this.handleValid(formValue);
+    public formValueChange(formValue: Record<string, any>): void {
+        this.formValue$.next(formValue as DienstAanmakenConfig);
+        this.handleValid(formValue as DienstAanmakenConfig);
     }
 
     private handleValid(formValue: DienstAanmakenConfig): void {

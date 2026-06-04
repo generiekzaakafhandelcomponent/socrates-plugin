@@ -36,8 +36,14 @@ export class SocratesConfigurationComponent
     @Output() valid: EventEmitter<boolean> = new EventEmitter<boolean>();
     @Output() configuration: EventEmitter<PluginConfigurationData> = new EventEmitter<PluginConfigurationData>();
 
-    readonly authenticationPluginSelectItems$: Observable<Array<{ id: string; text: string }>> =
-        combineLatest([
+    readonly authenticationPluginSelectItems$: Observable<Array<{ id: string; text: string }>>;
+
+    constructor(
+        private readonly pluginManagementService: PluginManagementService,
+        private readonly translateService: TranslateService,
+        private readonly pluginTranslationService: PluginTranslationService
+    ) {
+        this.authenticationPluginSelectItems$ = combineLatest([
             this.pluginManagementService.getPluginConfigurationsByCategory(
                 'http-client-authentication'
             ),
@@ -53,12 +59,6 @@ export class SocratesConfigurationComponent
                 }))
             )
         );
-
-    constructor(
-        private readonly pluginManagementService: PluginManagementService,
-        private readonly translateService: TranslateService,
-        private readonly pluginTranslationService: PluginTranslationService
-    ) {
     }
 
 
@@ -74,9 +74,9 @@ export class SocratesConfigurationComponent
         this.saveSubscription?.unsubscribe();
     }
 
-    formValueChange(formValue: SocratesConfig): void {
-        this.formValue$.next(formValue);
-        this.handleValid(formValue);
+    formValueChange(formValue: Record<string, any>): void {
+        this.formValue$.next(formValue as SocratesConfig);
+        this.handleValid(formValue as SocratesConfig);
     }
 
     private handleValid(formValue: SocratesConfig): void {
