@@ -2,6 +2,10 @@
 
 Overzicht van wijzigingen per versie van de Socrates-plugin.
 
+## 2.0.3
+
+Ondersteuning voor Valtimo 13.48.0.
+
 ## 2.0.2
 
 Valtimo-versies worden niet langer afgedwongen op consumers van de plugin: de Valtimo dependency-BOM wordt nu alleen
