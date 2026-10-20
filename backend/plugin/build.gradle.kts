@@ -38,6 +38,8 @@ dependencies {
 
     compileOnly("io.github.oshai:kotlin-logging:$kotlinLoggingVersion")
 
+    implementation("com.ritense.valtimoplugins:http-client-authentication:2.0.0")
+
     // Testing
     testImplementation("com.ritense.valtimo:plugin-valtimo")
     testImplementation("com.ritense.valtimo:process-document")

@@ -60,5 +60,5 @@ data class UitbetalingUitkering(
      * 04 = Gemachtigde
      * 05 = Bewindvoerder
      */
-    val soortUitbetaling: String? = null,
+    val soortUitbetaling: String,
 )
