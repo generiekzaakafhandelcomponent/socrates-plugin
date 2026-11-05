@@ -38,7 +38,7 @@ dependencies {
 
     compileOnly("io.github.oshai:kotlin-logging:$kotlinLoggingVersion")
 
-    implementation("com.ritense.valtimoplugins:http-client-authentication:2.0.0")
+    implementation("com.ritense.valtimoplugins:http-client-authentication:3.1.1")
 
     // Testing
     testImplementation("com.ritense.valtimo:plugin-valtimo")
@@ -47,7 +47,6 @@ dependencies {
     testImplementation("com.ritense.valtimo:local-resource")
     testImplementation("com.ritense.valtimo:test-utils-common")
     implementation("io.github.microutils:kotlin-logging:3.0.5")
-    implementation("com.ritense.valtimoplugins:http-client-authentication-plugin:1.0.0")
 
     testImplementation("org.springframework.boot:spring-boot-starter-web")
     testImplementation("org.springframework.boot:spring-boot-starter-data-jpa")
